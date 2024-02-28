@@ -1,16 +1,11 @@
 package runners;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
-
-@RunWith(Cucumber.class)
-@CucumberOptions(
-        publish = true,
-        features = "src/test/resources/features/google.feature"
-        , glue = "steps"
-        , snippets = CAMELCASE)
+@Suite
+@IncludeEngines("cucumber")
+@SelectClasspathResource("features")
 public class GoogleRunner {
 }

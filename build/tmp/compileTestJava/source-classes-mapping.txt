@@ -1,4 +1,0 @@
-runners/GoogleRunner.java
- runners.GoogleRunner
-steps/GoogleStepDefinition.java
- steps.GoogleStepDefinition
